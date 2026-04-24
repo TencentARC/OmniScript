@@ -11,8 +11,8 @@ _**[Junfu Pu<sup>\*</sup>](https://pujunfu.github.io/),
 <sup>\*</sup>**Equal Contribution**
 
 [![arXiv](https://img.shields.io/badge/arXiv-2604.11102-b31b1b.svg)](https://arxiv.org/abs/2604.11102) &nbsp; 
-[![Demo](https://img.shields.io/badge/OmniScript-Demo-blue)]() &nbsp; 
-[![Static Badge](https://img.shields.io/badge/ARC-API-green)]() &nbsp; 
+[![Demo](https://img.shields.io/badge/OmniScript-Demo-blue)](https://arc.tencent.com/zh/ai-demos/multimodal) &nbsp; 
+[![Static Badge](https://img.shields.io/badge/ARC-API-green)](https://arc.tencent.com/zh/document/ARC-OmniScript) &nbsp; 
 [![Static Badge](https://img.shields.io/badge/Model-Huggingface-yellow)]()
 [![Blog](https://img.shields.io/badge/OmniScript-Homepage-orange)](https://arcomniscript.github.io/) &nbsp; 
 [![Example](https://img.shields.io/badge/OmniScript-Example-purple)](https://arcomniscript.github.io/example/index.html)
@@ -21,6 +21,7 @@ _**[Junfu Pu<sup>\*</sup>](https://pujunfu.github.io/),
 > **Note:** Our code and model weights are currently undergoing internal open-source review. They will be publicly released once the review is complete.
 
 ## News
+- **[2026/04/24]** The [Online Demo](https://arc.tencent.com/zh/ai-demos/multimodal) and [API Service](https://arc.tencent.com/zh/document/ARC-OmniScript) are now available.
 - **[2026/04/22]** Release the [technical report](https://arxiv.org/abs/2604.11102), [project page](https://arcomniscript.github.io/), and [examples](https://arcomniscript.github.io/example/index.html).
 
 ## Introduction
@@ -83,6 +84,27 @@ The model is trained via a progressive pipeline: modality alignment (1M videos) 
 
 With only 8B parameters, OmniScript outperforms all open-source models (including Qwen3VL-235B) and achieves performance comparable to proprietary models like Gemini-3-Pro on both event-level and scene-level metrics.
 
+## Online Demo & API
+### Online Demo
+We provide an [**Online OmniScript Demo**](https://arc.tencent.com/zh/ai-demos/multimodal) hosted on the [ARC Lab website](https://arc.tencent.com) where you can upload a video and experience OmniScript directly - no local setup required.
+<p align="center">
+    <img src="./figures/arcwebdemo.png" width="90%"/>
+<p>
+
+**How to find demo on [ARC Lab Homepage](https://arc.tencent.com/en)**:
+
+_[ARC Lab](https://arc.tencent.com/en/index) -> AI Demo -> Register with Phone No. -> Multimodal Comprehension and Generation -> ARC-OmniScript_
+
+### API Service
+We provide model access via API service. A brief tutorial on how to use the API is as follow.
+For more details,  please refer to the [documentation](https://arc.tencent.com/zh/document/ARC-OmniScript).
+
+_Prior to using the OmniScript API, obtaining an access token (ARC-Token) is mandatory. Users who are not logged in are required to complete account verification first._
+
+_**Steps to get your token:**_
+1. _**Log in:** Visit [ARC Website](https://arc.tencent.com) and log in with your mobile number._
+1. _**Retrieve Token:** Once logged in, click the user icon in the top-right corner and select "View Token" from the dropdown menu to get your ARC-TOKEN._
+
 ## Requirements
 
 - Python >= 3.10
@@ -95,7 +117,7 @@ source setup_env.sh
 
 This will create a conda environment `omniscript` and install all dependencies (PyTorch, FFmpeg, Flash Attention, etc.).
 
-## Web Demo
+## Local Web Demo
 
 A Flask-based interface for uploading videos and viewing structured screenplay results with interactive timestamp navigation.
 
